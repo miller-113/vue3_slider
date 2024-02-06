@@ -1,0 +1,31 @@
+{
+  "name": "slider_app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@splidejs/vue-splide": "^0.6.12",
+    "axios": "^1.6.7",
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-awesome-paginate": "^1.1.46",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-vimeo-player": "^1.1.2",
+    "vue3-carousel": "^0.3.1",
+    "vue3-slick-carousel": "^1.0.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "vue-concise-slider": "^4.2.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
