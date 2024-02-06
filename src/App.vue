@@ -10,7 +10,6 @@
       </template>
     </carousel>
 
-    <!-- Обычная пагинация -->
     <div class="pagination">
       <vue-awesome-paginate
         :total-items="videos.length"
@@ -26,7 +25,7 @@
       <div class="popup-overlay">
         <div class="popup">
           <vueVimeoPlayer class="iframeCont" :video-id="currentVideo.id" autoplay />
-              <!-- Пагинация для открытия видео во всплывающем окне -->
+
           <div class="popup-pagination">
             <div v-for="(video, index) in videos" :key="index" @click="openPopup(video, index)" :class="{ active: index === currentVideoIndex }"></div>
           </div>
@@ -82,9 +81,7 @@ export default {
       axios.get(`https://vimeo.com/api/v2/video/${video.id}.json`)
         .then(response => {
           const videoData = response.data[0];
-          // Присваиваем данные о миниатюре для каждого видео
           video.thumbnail = videoData.thumbnail_large;
-          // Можно также присвоить другие свойства видео, если нужно
         })
         .catch(error => {
           console.error(`Error fetching data for video with ID ${video.id}:`, error);
